@@ -1,0 +1,14 @@
+8183  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fec85f48a10) = 8184
+8184  --- SIGSEGV {si_signo=SIGSEGV, si_code=SEGV_MAPERR, si_addr=0x10} ---
+8183  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fec85f48a10) = 8186
+8183  +++ exited with 0 +++
+8186  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fec85f48a10) = 8187
+8187  +++ exited with 0 +++
+8186  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8187, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+8186  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fec85f48a10) = 8188
+8188  +++ exited with 0 +++
+8186  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=8188, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+8186  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fec85f48a10) = 8189
+8189  +++ exited with 0 +++
+8186  +++ exited with 0 +++
+8184  +++ killed by SIGSEGV (core dumped) +++
