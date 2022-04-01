@@ -23,7 +23,13 @@ bool flag_de_fin = false;
 
 void write_zero() {
    for (int i=0; i < nbConsomateurs; i++) {
-      tampon[i] = '0';
+      sem_wait(&libre);
+      sem_wait(&mutex);
+      tampon[ip] = '0';
+      ip = (ip+1) % tailleTampon;
+      nbCharEcrit++;
+      sem_post(&mutex);
+      sem_post(&occupe);
    }
 }
 
