@@ -1,0 +1,12 @@
+echo $PATH
+/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/evanblanc/opt/anaconda3/bin:/Users/evanblanc/opt/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/local/CrossPack-AVR/bin:/usr/local/bin
+
+which sleep
+/bin/sleep
+
+sleep 1
+/bin/sleep 1
+/sleep 1
+
+sleep 1000 
+ctrl+c
