@@ -3,7 +3,7 @@
  *
  * Ecole polytechnique de Montreal, GIGL, Automne  2022
  * Blanc, Evan 2079808
- * Mouchahid, Ali
+ * Mouchahid, Ali 2060842
  */
 
 #include "libprocesslab/libprocesslab.h"
@@ -66,7 +66,6 @@ void question1()
                     processesCreated += status;
                     exit(processesCreated);
                 }
-
                 if (!fork())
                 { // Level 2.4
                     while (wait(&status) > 0)
@@ -83,7 +82,6 @@ void question1()
                     processesCreated += status;
                     exit(processesCreated);
                 }
-
                 if (!fork())
                 { // Level 2.6
                     while (wait(&status) > 0)
@@ -92,7 +90,6 @@ void question1()
                     processesCreated += status;
                     exit(processesCreated);
                 }
-
                 while (wait(&status) > 0)
                     processesCreated++;
                 registerProc(1, 3, getpid(), getppid());
