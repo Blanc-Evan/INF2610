@@ -17,37 +17,37 @@
 void question2( )   {
   int status;
     if(fork()) {    // Level 0
-    int numberOfProcessusCreated;
+    int numberOfProcessesCreated;
     while(wait(&status) > 0) {
-      numberOfProcessusCreated+=status;
+      numberOfProcessesCreated+=status;
     }
     registerProc(0, 0, getpid(), getppid());
     execl("/user/bin/ls", "ls -l", NULL);
         if (fork() == 0) {    // Level 1.2
-          int processus;
+          int process;
           while(wait(&status) > 0) {
-              processus+=status;
+              process+=status;
           }
           registerProc(1, 2, getpid(), getppid());
             if (fork()) {    // Level2.5
-              while(wait(&numberOfProcessusCreated) > 0);
+              while(wait(&numberOfProcessesCreated) > 0);
               registerProc(2, 5, getpid(), getppid());
                 if (fork()) { // Level2.6
-                  while(wait(&numberOfProcessusCreated) > 0);
+                  while(wait(&numberOfProcessesCreated) > 0);
                   registerProc(2, 6, getpid(), getppid());
                     if (fork()) { // Level2.7
-                      while(wait(&numberOfProcessusCreated) > 0);
+                      while(wait(&numberOfProcessesCreated) > 0);
                       registerProc(2, 7, getpid(), getppid());
                     }
                 }
             }
-            _exit(processus);
+            _exit(process);
         }
-        _exit(numberOfProcessusCreated);
+        _exit(numberOfProcessesCreated);
     } else {    // Level 1.1
-      int processus;
+      int process;
       while(wait(&status) > 0){
-        processus+=status;
+        process+=status;
       }
       registerProc(1, 1, getpid(), getppid());
         if (fork()) {    // Level2.1
@@ -66,6 +66,6 @@ void question2( )   {
                 }
             }
         }
-        _exit(processus);
+        _exit(process);
     }
 }
